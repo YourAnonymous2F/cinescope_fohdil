@@ -68,11 +68,11 @@
                 {error && (
                     <div className="text-center mt-10">
                         <p className="mb-3">Failed to load movies</p>
-                        <button onClick={refetch} className="px-4 py-2 rounded">Retry</button>
+                        <button onClick={refetch} className="px-4 py-2 rounded border bg-gray-800 text-white font-bold">Retry</button>
                     </div>
                 )}
 
-                <div className="grid gap-2 mt-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
+                <div className="grid gap-4 mt-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
                     {/* moviecard loading skeleton */}
                     {!isSearching && loading &&
                         Array.from({length: 8}).map((_, i) => (

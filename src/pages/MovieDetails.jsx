@@ -67,7 +67,7 @@ function MovieDetails() {
     return (
         <div>
             <div className="w-full h-[400px] bg-cover bg-center" style={{ backgroundImage: `url(${getImageUrl(movie.backdrop_path, "w780")})`}}>
-                <button onClick={() => navigate(-1)} className="bg-blue-500 px-1 m-2">Back</button>
+                <button onClick={() => navigate(-1)} className="bg-blue-500 text-white text-xl px-1 m-2">←</button>
             </div>
 
             <div>
