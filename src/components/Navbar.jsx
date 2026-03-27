@@ -17,7 +17,7 @@ function Navbar() {
     }, [search, setSearchTerm]);
 
   return (
-    <nav className="sticky top-0 flex items-center justify-between px-4 py-3 text-white bg-gray-800 ">
+    <nav className="sticky top-0 z-50 flex items-center justify-between px-4 py-3 text-white bg-gray-800 ">
         <Link to="/" className="text-[20px] font-bold">
             Cine<span className="text-yellow-500">Scope</span>
         </Link>
