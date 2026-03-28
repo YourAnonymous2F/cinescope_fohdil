@@ -26,7 +26,7 @@ function Navbar() {
 
         <Link to="/watchlist" className="flex gap-1 border px-1 relative rounded">
             <p className="text-[14px] text-yellow-500 px-2">Watchlist</p>
-            <p className="absolute -top-2 -right-[9px] bg-red-700 rounded-full px-[2px] text-[10px]">{watchlist.length}</p>
+            <p className="absolute -top-2 -right-[6px] bg-red-700 rounded-full px-1 text-[10px]">{watchlist.length}</p>
         </Link>
 
     </nav>
