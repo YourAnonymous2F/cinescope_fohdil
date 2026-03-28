@@ -19,7 +19,7 @@ function MovieCard({movie}) {
     }
 
     return (
-        <div className="shadow-[0px_3px_8px_rgba(0,0,0,0.24)]">
+        <div className="rounded-xl overflow-hidden shadow-[0px_3px_8px_rgba(0,0,0,0.24)] transition-all duration-200 ease-in-out hover:scale-105 hover:shadow-xl cursor-pointer">
             <Link to={`/movie/${movie.id}`}>
                 <img src={getImageUrl(movie.poster_path, "w300")} alt={movie.title} className="w-full h-[300px] object-cover"/>
             </Link>

@@ -67,25 +67,27 @@ function MovieDetails() {
     return (
         <div>
             <div className="w-full h-[400px] bg-cover bg-center" style={{ backgroundImage: `url(${getImageUrl(movie.backdrop_path, "w780")})`}}>
-                <button onClick={() => navigate(-1)} className="bg-blue-500 text-white text-xl px-1 m-2">←</button>
+                <button onClick={() => navigate(-1)} className="bg-blue-500 text-white text-[14px] font-bold px-1 m-2 rounded-full">←</button>
             </div>
 
-            <div>
-                <h1>{movie.title}</h1>
-                <p>{movie.tagline}</p>
-                <p>{movie.overview}</p>
-                <p>Genres: {movie.genres?.map((g) => g.name).join(", ")}</p>
-                <p>Release Year: {movie.release_date?.split("-")[0]}</p>
-                <p>Runtime: {movie.runtime} min</p>
-                <p>Rating: ⭐ {movie.vote_average?.toFixed(1)} ({movie.vote_count} votes)</p>
-                <button onClick={handleToggleWatchlist}>{inWatchlist ? "❤️" : "🤍"}</button>
+            <div className="py-3">
+                <h1 className="font-bold text-2xl"> {movie.title}</h1>
+                <p className="font-semibold">Tagline: {movie.tagline}</p>
+                <p className="font-normal text-xs mt-2 mb-2">{movie.overview}</p>
+                <p className="font-semibold">Genres: {movie.genres?.map((g) => g.name).join(", ")}</p>
+                <div className="flex items-center gap-3 py-2">
+                    <p className="border px-2 py-1 text-xs rounded-full bg-black text-white">{movie.release_date?.split("-")[0]}</p>
+                    <p className="border px-2 py-1 text-xs rounded-full bg-black text-white">{movie.runtime} min</p>
+                    <p className="border px-2 py-1 text-xs rounded-full bg-black text-white">⭐ {movie.vote_average?.toFixed(1)} ({movie.vote_count} votes)</p>
+                    <button onClick={handleToggleWatchlist}>{inWatchlist ? "❤️" : "🤍"}</button>
+                </div>
             </div>
 
             <div className="mt-6 px-2">
                 <h2 className="font-bold mb-4">Cast</h2>
                 <div className="flex overflow-x-auto gap-4 pb-2">
                     {cast.map((c) => (
-                        <div key={c.cast_id} className="flex-shrink-0 w-[120px] text-center border p-2">
+                        <div key={c.cast_id} className="flex-shrink-0 w-[120px] text-center border p-2 shadow-[0px_3px_8px_rgba(0,0,0,0.24)]">
                             <img src={getImageUrl(c.profile_path, "w300")} alt={c.name} className="w-[100px] h-[100px] object-cover rounded-full mx-auto border" />
                             <p className="text-xs font-medium mt-2">{c.name}</p>
                         </div>

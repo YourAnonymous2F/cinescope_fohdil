@@ -72,7 +72,7 @@
                     </div>
                 )}
 
-                <div className="grid gap-4 mt-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
+                <div className="grid gap-5 mt-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
                     {/* moviecard loading skeleton */}
                     {!isSearching && loading &&
                         Array.from({length: 8}).map((_, i) => (
